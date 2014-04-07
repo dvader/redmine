@@ -74,7 +74,6 @@ class SearchController < ApplicationController
         r, c = s.singularize.camelcase.constantize.search(@tokens, projects_to_search,
           :all_words => @all_words,
           :titles_only => @titles_only,
-          :limit => (limit+1),
           :offset => offset,
           :before => params[:previous].nil?)
         @results += r
